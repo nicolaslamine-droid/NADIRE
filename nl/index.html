@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="nl" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NADIRE · Maquettes van kastelen en gebouwen</title>
+<meta name="description" content="Maquettes van kastelen, domeinen en gebouwen, opgemeten met een drone en in 3D geprint. Waver, heel België. +32 472 09 89 22.">
+<link rel="canonical" href="https://nadire.be/nl/">
+<link rel="alternate" hreflang="fr" href="https://nadire.be/">
+<link rel="alternate" hreflang="nl" href="https://nadire.be/nl/">
+<link rel="alternate" hreflang="en" href="https://nadire.be/en/">
+<link rel="alternate" hreflang="x-default" href="https://nadire.be/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NADIRE · Maquettes van kastelen en gebouwen">
+<meta property="og:description" content="Maquettes van kastelen, domeinen en gebouwen, opgemeten met een drone en in 3D geprint. Waver, heel België. +32 472 09 89 22.">
+<meta property="og:url" content="https://nadire.be/nl/">
+<meta property="og:image" content="https://nadire.be/img/boelhe_1.jpg">
+<meta name="theme-color" content="#1E2933">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#FCFCFA; --ink:#1E2933; --soft:#4A5560; --muted:#6E7780; --line:#E3E1DB; --brass:#A9824B; --mat:#F1EFEA;
+  --sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --mark:"Cormorant Garamond","Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#12181E;--ink:#E9E6DF;--soft:#C3C6C9;--muted:#9AA2AA;--line:#2A333C;--brass:#C9A46C;--mat:#1A2129;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12181E;--ink:#E9E6DF;--soft:#C3C6C9;--muted:#9AA2AA;--line:#2A333C;--brass:#C9A46C;--mat:#1A2129;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--brass);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--brass)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+img{display:block;width:100%;height:auto}
+h1,h2,h3{font-weight:500;line-height:1.25;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.col{max-width:620px}
+
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:26px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand svg{width:26px;height:26px}
+.brand span{font-family:var(--mark);font-size:23px;font-weight:600;letter-spacing:.28em}
+nav{display:flex;gap:24px;font-size:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+nav a{text-decoration:none;color:var(--soft)}
+nav a:hover{color:var(--ink)}
+
+.intro{padding-block:56px 40px}
+.intro h1{font-size:clamp(28px,3.6vw,40px);max-width:20ch}
+.intro p{margin-top:20px;color:var(--soft);font-size:17px}
+.intro .who{margin-top:18px;font-size:14px;color:var(--muted)}
+
+figure{margin:0}
+figcaption{margin-top:10px;font-size:13px;color:var(--muted);max-width:70ch}
+figcaption b{font-weight:600;color:var(--ink)}
+.wide{margin-bottom:24px}
+.wide img{aspect-ratio:16/8;object-fit:cover;object-position:50% 60%}
+
+section{padding-block:72px 24px}
+h2{font-size:24px;margin-bottom:8px}
+.sub{color:var(--muted);font-size:15px}
+
+.works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 28px;margin-top:36px}
+.work{display:grid;gap:10px;align-content:start;min-width:0}
+.work img{aspect-ratio:4/3;object-fit:cover;background:var(--mat)}
+.work h3{font-size:17px;margin-top:6px}
+.work .meta{font-size:13px;color:var(--muted)}
+.work p{font-size:14.5px;color:var(--soft)}
+
+.steps{display:grid;gap:64px;margin-top:44px;counter-reset:s}
+.st{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:44px;align-items:start}
+.st .t{min-width:0}
+.st h3{font-size:19px;display:flex;gap:12px;align-items:baseline}
+.st h3::before{counter-increment:s;content:counter(s);font-size:14px;color:var(--brass);font-weight:600;min-width:1ch}
+.st p{margin-top:12px;color:var(--soft);font-size:15.5px}
+.st .v{min-width:0;display:grid;gap:10px}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.key{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.key i{display:inline-block;width:9px;height:9px;margin-right:6px;vertical-align:0}
+.k1{background:#1E2933}.k2{background:#A9824B;border-radius:50%}.k3{border:1.5px solid #7A5A2B;border-radius:50%}.k4{background:#1E2933;transform:rotate(45deg) scale(.85)}
+
+.viewer{position:relative;aspect-ratio:16/10;background:var(--mat);overflow:hidden;max-width:100%}
+.viewer canvas{display:block;width:100%!important;height:100%!important;touch-action:none;cursor:grab}
+.viewer .msg{position:absolute;inset:0}
+.viewer .msg img{width:100%;height:100%;object-fit:cover}
+.viewer .bar{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 10px;font-size:12px;color:var(--muted)}
+.viewer button{font:500 12px/1 var(--sans);padding:7px 10px;background:var(--bg);color:var(--ink);border:1px solid var(--line);cursor:pointer}
+.viewer button:hover{border-color:var(--brass)}
+
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--brass);color:var(--brass)}
+.btn.main:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+.btn svg{width:16px;height:16px}
+.call{margin-top:72px;padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:32px;align-items:center}
+.call h2{font-size:clamp(22px,2.6vw,28px);margin:0}
+.call p{margin-top:10px;color:var(--soft)}
+.call .cta{margin-top:0;justify-content:flex-end}
+.lang{display:flex;gap:8px;font-size:13px;color:var(--muted)}
+.lang a{text-decoration:none;color:var(--muted)}
+.lang a[aria-current]{color:var(--ink);font-weight:600}
+.tel{font-variant-numeric:tabular-nums;white-space:nowrap}
+.fab{display:none}
+@media (max-width:640px){.fab{display:inline-flex;position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:6;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  .call{grid-template-columns:minmax(0,1fr)}.call .cta{justify-content:flex-start}}
+.about{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:44px}
+.about .t p{color:var(--soft)}
+.about .t p+p{margin-top:14px}
+.about .t h2+p{margin-top:12px}
+dl.c{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 22px;font-size:15px}
+dl.c dt{color:var(--muted)}
+dl.c dd{margin:0;overflow-wrap:anywhere}
+.small{margin-top:22px;font-size:13px;color:var(--muted)}
+
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:48px 36px;margin-top:64px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+
+@media (max-width:860px){
+  .works{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .st,.about{grid-template-columns:minmax(0,1fr);gap:20px}
+  .steps{gap:52px}
+}
+@media (max-width:560px){
+  nav a.tel{display:none}
+  .works{grid-template-columns:minmax(0,1fr)}
+  .wide img{aspect-ratio:4/3}
+  nav{gap:16px;font-size:13px}
+  section{padding-block:56px 16px}
+}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="NADIRE">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 38 20 20 38 2 20Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 8 20 20 32 20Z M20 32 20 20 8 20Z" fill="currentColor"/><circle cx="20" cy="20" r="2.2" fill="currentColor"/></svg>
+      <span>NADIRE</span>
+    </a>
+    <nav aria-label="Menu">
+      <a href="#methode">Werkwijze</a>
+      <a href="#contact">Contact</a>
+      <a class="tel" href="tel:+32472098922">+32 472 09 89 22</a>
+      <span class="lang"><a href="../" lang="fr" hreflang="fr">FR</a> <a href="../nl/" lang="nl" hreflang="nl" aria-current="true">NL</a> <a href="../en/" lang="en" hreflang="en">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap intro">
+    <div class="col">
+      <h1>Maquettes van kastelen en gebouwen, in 3D geprint</h1>
+      <p>Elke maquette vertrekt van een nauwkeurige opmeting van het gebouw met een drone, aangevuld met laserdata vanuit de lucht. Daken, ramen en schouwen worden opgemeten en op schaal weergegeven, en de maquette wordt op een houten sokkel gemonteerd.</p>
+      <p class="who">Nicolas Lamine, bio-ingenieur, Waver</p>
+      <div class="cta">
+        <a class="btn main" href="tel:+32472098922"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>Bel <span class="tel">+32 472 09 89 22</span></a>
+        <a class="btn" href="#methode">Zo werk ik</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="wide">
+      <img src="../img/boelhe_1.jpg" alt="Witte maquette van het domein van Boëlhe op een houten plaat: kasteel, vleugels en tuinen" width="1600" height="900">
+      <figcaption><b>Domein van Boëlhe</b>, Haspengouw. Schaal 1:238, 30 × 27 cm.</figcaption>
+    </figure>
+  </div>
+
+  <section id="methode">
+    <div class="wrap">
+      <div class="col">
+        <h2>De werkwijze</h2>
+        <p class="sub">Acht stappen, van de studie van de site tot de plaatsing, elk gecontroleerd voor de volgende begint. Voorbeelden: Boëlhe in Haspengouw, Corroy-le-Château en Bois-Seigneur-Isaac.</p>
+      </div>
+
+      <div class="steps">
+        <div class="st">
+          <div class="t">
+            <h3>Studie van de site en vluchtplan</h3>
+            <p>Elke site wordt vóór het bezoek bestudeerd: reliëf, begroeiing, hoogte van de gebouwen, luchtvaartbeperkingen. Daarna wordt de vlucht punt per punt berekend, met de hoek en de afstand van elke opname.</p>
+          </div>
+          <figure class="v">
+            <img src="../img/bsi_plan.jpg" alt="Kaart van de geplande opnames rond het kasteel van Bois-Seigneur-Isaac" width="1320" height="990" loading="lazy">
+                        <figcaption>Kasteel van Bois-Seigneur-Isaac: vluchtplan met 146 opnames.</figcaption>
+          </figure>
+        </div>
+
+        <div class="st">
+          <div class="t">
+            <h3>Opnames vanuit de lucht</h3>
+            <p>Eén bezoek ter plaatse van één tot twee uur, met de schriftelijke toestemming van de eigenaar. De drone volgt het berekende plan en brengt het hele gebouw, daken en gevels, vanuit talrijke hoeken in beeld.</p>
+          </div>
+          <figure class="v">
+            <img src="../img/drone.jpg" alt="Dronefoto van de binnenplaats van het kasteel van Corroy" width="1400" height="788" loading="lazy">
+            <figcaption>Kasteel van Corroy: een van de 162 foto's, genomen in één voormiddag.</figcaption>
+          </figure>
+        </div>
+
+        <div class="st">
+          <div class="t">
+            <h3>Hoogtereferentie</h3>
+            <p>De metingen worden vergeleken met laseropmetingen vanuit de lucht. Zo worden goot- en nokhoogtes, dakhellingen en het reliëf van het terrein op enkele decimeters nauwkeurig vastgelegd. In Corroy werd elk leien dakvlak afzonderlijk opgemeten.</p>
+          </div>
+          <figure class="v">
+            <div class="pair">
+              <img src="../img/lidar.jpg" alt="Schaduwreliëf van het kasteel van Corroy en zijn grachten, volgens de laseropmeting vanuit de lucht" width="1080" height="1080" loading="lazy">
+              <img src="../img/bsi_lidar.jpg" alt="Schaduwreliëf van het kasteel van Bois-Seigneur-Isaac en de omringende bomen, volgens de laseropmeting vanuit de lucht" width="1080" height="1080" loading="lazy">
+            </div>
+            <figcaption>Laseropmeting van het kasteel van Corroy met zijn grachten, en van Bois-Seigneur-Isaac in zijn bebost park.</figcaption>
+          </figure>
+        </div>
+
+        <div class="st">
+          <div class="t">
+            <h3>Fotogrammetrische reconstructie</h3>
+            <p>De opnames worden in drie dimensies gereconstrueerd en gegeorefereerd. Dat levert een bovenaanzicht van 3 centimeter per pixel op en gevelopmetingen op schaal, waarop elke raamopening wordt geteld en gemeten.</p>
+          </div>
+          <figure class="v">
+            <div class="pair">
+              <img src="../img/ortho.jpg" alt="Bovenaanzicht van het kasteel van Corroy, berekend uit de dronefoto's" width="1000" height="1000" loading="lazy">
+              <img src="../img/facade.jpg" alt="Rechtgezette binnenplaatsgevel van Corroy met een maatlat in meter" width="891" height="828" loading="lazy">
+            </div>
+            <figcaption>Kasteel van Corroy: het bovenaanzicht en een gevel aan de binnenplaats, maatlat in meter.</figcaption>
+          </figure>
+        </div>
+
+        <div class="st">
+          <div class="t">
+            <h3>Modellering</h3>
+            <p>Het gebouw wordt volledig opnieuw getekend op basis van de metingen, volume per volume, tot de dakkapellen, schouwen en kunstwerken toe. Het terrein wordt met zijn werkelijke reliëf weergegeven.</p>
+          </div>
+          <figure class="v">
+            <div class="viewer" id="viewer">
+              <div class="msg" id="vmsg"><img src="../img/corroy_1.jpg" alt="3D-weergave van de maquette van het kasteel van Corroy" width="1600" height="1056"></div>
+              <div class="bar"><span id="vhint">Model wordt geladen…</span><span><button type="button" id="vrot">Stoppen</button> <button type="button" id="vreset">Centreren</button></span></div>
+            </div>
+            <figcaption>Kasteel van Corroy: sleep om eromheen te draaien.</figcaption>
+            <img src="../img/boelhe_modele.jpg" alt="3D-model van het domein van Boëlhe gezien vanaf de binnenplaats, met de daken en de rozet" width="1400" height="955" loading="lazy">
+            <figcaption>Domein van Boëlhe: het volledige model, met binnenplaats en rozet.</figcaption>
+          </figure>
+        </div>
+
+        <div class="st">
+          <div class="t">
+            <h3>Conformiteitscontrole</h3>
+            <p>Het model wordt gevel per gevel vergeleken met de echte opnames. Elke afwijking wordt opgespoord en gecorrigeerd vóór de productie.</p>
+          </div>
+          <figure class="v">
+            <img src="../img/controle.jpg" alt="Foto van de binnenplaats van Corroy met de contouren van het model in het rood" width="1008" height="567" loading="lazy">
+            <figcaption>Kasteel van Corroy: de toegangspoort aan de binnenplaats, model in het rood.</figcaption>
+            <img src="../img/boelhe_cmp.jpg" alt="Vergelijking tussen het luchtbeeld van het domein van Boëlhe en het model van bovenaf" width="1400" height="630" loading="lazy">
+            <figcaption>Domein van Boëlhe: links het dronebeeld, rechts het model.</figcaption>
+          </figure>
+        </div>
+
+        <div class="st">
+          <div class="t">
+            <h3>Voorbereiding van de productie</h3>
+            <p>De maquette wordt opgedeeld in onderdelen die tot op een tiende millimeter passen, zodat de naden na de montage onzichtbaar blijven.</p>
+          </div>
+          <figure class="v">
+            <img src="../img/decoupe.jpg" alt="Verdelingsplan van de maquette van Corroy in negen terreintegels, vier gebouwen en een brug" width="900" height="900" loading="lazy">
+            <figcaption>Kasteel van Corroy, plaat van 60 × 60 cm.</figcaption>
+          </figure>
+        </div>
+
+        <div class="st">
+          <div class="t">
+            <h3>Productie en montage</h3>
+            <p>De onderdelen worden in lagen van ongeveer een tiende millimeter vervaardigd, in wit of in twee tinten, en daarna gemonteerd op een houten sokkel met een gegraveerd naambordje.</p>
+          </div>
+          <figure class="v">
+            <div class="pair">
+              <img src="../img/boelhe_3.jpg" alt="Detail van de maquette van Boëlhe: poort, klokkentorentje en daken" width="1200" height="675" loading="lazy">
+              <img src="../img/boelhe_plaque.jpg" alt="Gegraveerd NADIRE-naambordje op de houten sokkel" width="900" height="506" loading="lazy">
+            </div>
+            <figcaption>Domein van Boëlhe, gemonteerd op zijn plaat.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="call">
+        <div>
+          <h2>Hebt u een gebouw in gedachten?</h2>
+          <p>Bel me. In enkele minuten zeg ik u of de vlucht mogelijk is, welke maquettegrootte past en binnen welke termijn.</p>
+        </div>
+        <div class="cta">
+          <a class="btn main" href="tel:+32472098922"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg><span class="tel">+32 472 09 89 22</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap about">
+      <div class="t">
+        <h2>Contact</h2>
+        <p>Ik ben bio-ingenieur, opgeleid in geomatica en de verwerking van ruimtelijke gegevens. NADIRE is ontstaan uit een eerste maquette, die van het domein van Boëlhe.</p>
+        <p>Bellen is het eenvoudigst. U kunt me ook schrijven met het adres van het gebouw, de gewenste grootte van de maquette en, als u die hebt, enkele foto's of plannen. Ik antwoord binnen 48 uur.</p>
+      </div>
+      <div>
+        <dl class="c">
+          <dt>E-mail</dt><dd><a href="mailto:nicolaslamine@outlook.com">nicolaslamine@outlook.com</a></dd>
+          <dt>Telefoon</dt><dd><a class="tel" href="tel:+32472098922">+32 472 09 89 22</a></dd>
+          <dt>Adres</dt><dd>Waver, verplaatsingen in heel België</dd>
+        </dl>
+        <p class="small">Er wordt enkel gevlogen met de schriftelijke toestemming van de eigenaar. Geen enkele foto wordt zonder zijn akkoord gepubliceerd.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="btn main fab" href="tel:+32472098922" aria-label="NADIRE bellen op +32 472 09 89 22"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>Bellen</a>
+
+<footer>
+  <div class="wrap">
+    <span>NADIRE, Waver</span>
+    <span>Hoogtegegevens © SPW</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+  var BASE=document.documentElement.dataset.base||'';
+  var box=document.getElementById('viewer'), msg=document.getElementById('vmsg'), hint=document.getElementById('vhint');
+  var rotBtn=document.getElementById('vrot'), resetBtn=document.getElementById('vreset');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function off(t){hint.textContent=t;rotBtn.hidden=true;resetBtn.hidden=true}
+  if(!window.THREE||!THREE.GLTFLoader||!THREE.OrbitControls){off('3D-weergave niet beschikbaar op dit toestel.');return}
+  var renderer;
+  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:true})}catch(e){off('3D-weergave niet beschikbaar op dit toestel.');return}
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  renderer.outputEncoding=THREE.sRGBEncoding;
+  var scene=new THREE.Scene(), cam=new THREE.PerspectiveCamera(32,16/10,1,5000);
+  scene.add(new THREE.HemisphereLight(0xfff8ee,0x8a8070,0.85));
+  var sun=new THREE.DirectionalLight(0xffffff,0.9); sun.position.set(-500,700,400); scene.add(sun);
+  var fill=new THREE.DirectionalLight(0xdfe6ee,0.35); fill.position.set(500,300,-400); scene.add(fill);
+  var controls=new THREE.OrbitControls(cam,renderer.domElement);
+  controls.enableDamping=true; controls.dampingFactor=0.08; controls.maxPolarAngle=Math.PI*0.47; controls.minDistance=250; controls.maxDistance=2200;
+  controls.autoRotate=!reduce; controls.autoRotateSpeed=0.5; controls.enablePan=false;
+  function label(){rotBtn.textContent=controls.autoRotate?'Stoppen':'Draaien'}
+  label();
+  var home={p:new THREE.Vector3(-620,560,820),t:new THREE.Vector3(0,40,0)};
+  function resetView(){cam.position.copy(home.p);controls.target.copy(home.t);controls.update()}
+  function size(){var w=box.clientWidth,h=box.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}
+  function onFail(){off('Het 3D-model kon niet worden geladen.')}
+  function onLoad(g){
+    var root=g.scene; root.rotation.x=-Math.PI/2; scene.add(root);
+    root.traverse(function(o){if(o.isMesh){o.material.side=THREE.DoubleSide;o.material.roughness=0.9;o.material.metalness=0}});
+    box.insertBefore(renderer.domElement,box.firstChild); msg.hidden=true;
+    hint.textContent='Slepen om te draaien, knijpen om te zoomen';
+    size(); resetView();
+    (function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,cam)})();
+  }
+  new THREE.GLTFLoader().load(BASE+'models/corroy.glb',onLoad,undefined,onFail);
+  renderer.domElement.addEventListener('pointerdown',function(){controls.autoRotate=false;label()});
+  rotBtn.addEventListener('click',function(){controls.autoRotate=!controls.autoRotate;label()});
+  resetBtn.addEventListener('click',resetView);
+  window.addEventListener('resize',size);
+})();
+</script>
+
+</body>
+</html>
